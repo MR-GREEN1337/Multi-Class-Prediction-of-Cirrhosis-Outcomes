@@ -46,6 +46,7 @@ There's no need to talk about other libraries such as sklearn, scipy, matplotlib
 
 ## Model Architecture
 I opted for stacking, a highly used ml model architecture that combines heterogenous models, and aggregated by training a meta-learner: Another model that learns the best aggregating weights that minimize the stacking model on train model.
+![Stacking](images/stacking.png)
 
 ## Result
 ![Kaggle Ranking](images/ranking.png)
@@ -53,7 +54,9 @@ As you can see, I ranked top 38% up-to-day
 
 ## Issues and Future Improvements
 
+```plaintext
 Numerous approaches could be adopted to improve the accuracy of this model:
     - Feature engineering
     - hyperparameter optimization using optuna
     - eventually using a NN
+```
