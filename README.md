@@ -9,7 +9,6 @@ In this Playground Series - Season 3, Episode 26 on Kaggle, we seek to build a m
 - [Multi-Class Prediction of Cirrhosis Outcomes](#Multi-Class Prediction of Cirrhosis Outcomes)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
-  - [Files and Directory Structure](#files-and-directory-structure)
   - [Dependencies](#dependencies)
   - [Model Architecture](#model-architecture)
   - [Results](#results)
@@ -17,35 +16,16 @@ In this Playground Series - Season 3, Episode 26 on Kaggle, we seek to build a m
 
 ## Overview
 
-As always, the goal is to goal is to craft a white/black bow that minimizes the loss on the test loss.
-The first thing I sough to accomplish is to clean my data, that is, to fill missing numbers, and convert all to numerical data.
+As always, the primary objective is to create a model, whether in white-box or black-box fashion, that minimizes the loss on the test dataset. To initiate the process, my initial focus was on cleaning the data. This involved handling missing values and converting all data to numerical format.
 
-I finished by OneHot Encoding all the features, cause it's always better.
-
-In th
-
-## Files and Directory Structure
-
-Explain the organization of your project files and directories.
-
-```plaintext
-|-- /data
-|   |-- [Your dataset files]
-|-- /notebooks
-|   |-- your_model_creation_notebook.ipynb
-|-- /src
-|   |-- [Your source code files]
-|-- README.md
-|-- requirements.txt
-|-- [Other project files]
-```
+The data preprocessing culminated in the utilization of One-Hot Encoding for all features, a strategy known for its effectiveness in enhancing model performance by representing categorical variables in a numerical format.
 
 ## Dependencies
-I opted to use pycaret, a library that compares and ranks many state-of-the-art models on your data, and optuna, a newly-discovered library used to optimize my model.
-There's no need to talk about other libraries such as sklearn, scipy, matplotlib, seaborn, etc.
+I chose to leverage PyCaret, a comprehensive library that performs model comparison and ranking for numerous state-of-the-art models based on your dataset. Additionally, I incorporated Optuna, a recently discovered library designed for optimizing and fine-tuning my model's hyperparameters. This combination allows for efficient model selection and hyperparameter optimization, streamlining the process of developing a high-performing machine learning model without delving into the details of other common libraries such as sklearn, scipy, matplotlib, seaborn, etc.
 
 ## Model Architecture
-I opted for stacking, a highly used ml model architecture that combines heterogenous models, and aggregated by training a meta-learner: Another model that learns the best aggregating weights that minimize the stacking model on train model.
+I chose stacking, a widely used machine learning model architecture that combines heterogeneous models. Stacking involves training a meta-learner, another model, which learns the optimal aggregating weights to minimize the stacking model's performance on the training dataset. This meta-learner is responsible for efficiently combining predictions from diverse base models to improve overall predictive accuracy.
+
 ![Stacking](images/stacking.png)
 
 ## Result
@@ -56,6 +36,7 @@ As you can see, I ranked top 38% up-to-day
 
 ```plaintext
 Numerous approaches could be adopted to improve the accuracy of this model:
+    - Avoid overfitting in The stacking layer by encorporating Regularization
     - Feature engineering
     - hyperparameter optimization using optuna
     - eventually using a NN
