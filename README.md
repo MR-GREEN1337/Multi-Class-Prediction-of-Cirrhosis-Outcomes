@@ -48,7 +48,7 @@ There's no need to talk about other libraries such as sklearn, scipy, matplotlib
 I opted for stacking, a highly used ml model architecture that combines heterogenous models, and aggregated by training a meta-learner: Another model that learns the best aggregating weights that minimize the stacking model on train model.
 
 ## Result
-![Project Image](/workspaces/Multi-Class-Prediction-of-Cirrhosis-Outcomes/images/ranking.png)
+![Kaggle Ranking](images/ranking.png)
 As you can see, I ranked top 38% up-to-day
 
 ## Issues and Future Improvements
