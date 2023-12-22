@@ -2,7 +2,8 @@
 
 ## Overview
 
-In this Playground Series - Season 3, Episode 26 on Kaggle, we seek to build a model that predict the probability of a patient's disease using many features.
+In Season 3, Episode 26 of the Playground Series on Kaggle, our goal is to construct a model capable of forecasting the likelihood of a patient having a specific disease, leveraging a multitude of features.
+
 
 ## Table of Contents
 
